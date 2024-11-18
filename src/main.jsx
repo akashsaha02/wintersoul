@@ -11,6 +11,9 @@ import AuthProvider from './providers/AuthProvider'
 import Orders from './pages/Orders/Orders'
 import PrivateRoute from './routes/PrivateRoute'
 import Error from './pages/Error/Error';
+import DonationProvider from './providers/DonationProvider'
+import CampaignsPage from './pages/CampaignsPage/CampaignsPage'
+import DonationDetails from './pages/DonationDetails/DonationDetails'
 
 const router = createBrowserRouter([
   {
@@ -35,6 +38,14 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <Orders />
         </PrivateRoute>
+      },
+      {
+        path: '/donation-campaigns',
+        element: <CampaignsPage />
+      },
+      {
+        path: '/donation-campaigns/:id',
+        element: <DonationDetails/>
       }
     ]
   }
@@ -43,7 +54,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+      <DonationProvider>
+        <RouterProvider router={router} />
+      </DonationProvider>
     </AuthProvider>
   </StrictMode>,
 )

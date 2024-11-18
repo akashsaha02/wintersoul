@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Warmth for Dhaka",
+    "image": "https://example.com/images/dhaka-campaign.jpg",
+    "description": "Help us distribute warm clothes to underprivileged families in Dhaka this winter.",
+    "status": "Active",
+    "contactInfo": "dhaka@warmhaven.org",
+    "division": "Dhaka"
+  },
+  {
+    "id": 2,
+    "title": "Cozy Care in Chattogram",
+    "image": "https://example.com/images/chattogram-campaign.jpg",
+    "description": "Join our mission to spread warmth in the hill tracts and coastal areas of Chattogram.",
+    "status": "Active",
+    "contactInfo": "chattogram@warmhaven.org",
+    "division": "Chattogram"
+  },
+  {
+    "id": 3,
+    "title": "Sylhet Winter Relief",
+    "image": "https://example.com/images/sylhet-campaign.jpg",
+    "description": "Support families in Sylhet to stay warm with blankets and winter clothing.",
+    "status": "Active",
+    "contactInfo": "sylhet@warmhaven.org",
+    "division": "Sylhet"
+  },
+  {
+    "id": 4,
+    "title": "Khulna Winter Drive",
+    "image": "https://example.com/images/khulna-campaign.jpg",
+    "description": "Deliver warm essentials to remote villages in the Khulna division.",
+    "status": "Completed",
+    "contactInfo": "khulna@warmhaven.org",
+    "division": "Khulna"
+  },
+  {
+    "id": 5,
+    "title": "Rajshahi Cozy Campaign",
+    "image": "https://example.com/images/rajshahi-campaign.jpg",
+    "description": "Provide winter gear to families in need across Rajshahi city and surrounding areas.",
+    "status": "Upcoming",
+    "contactInfo": "rajshahi@warmhaven.org",
+    "division": "Rajshahi"
+  },
+  {
+    "id": 6,
+    "title": "Barishal Blanket Drive",
+    "image": "https://example.com/images/barishal-campaign.jpg",
+    "description": "Help us keep vulnerable communities warm in Barishal this chilly season.",
+    "status": "Active",
+    "contactInfo": "barishal@warmhaven.org",
+    "division": "Barishal"
+  },
+  {
+    "id": 7,
+    "title": "Mymensingh Kindness Drive",
+    "image": "https://example.com/images/mymensingh-campaign.jpg",
+    "description": "Join hands to ensure warmth and care for Mymensingh’s disadvantaged communities.",
+    "status": "Upcoming",
+    "contactInfo": "mymensingh@warmhaven.org",
+    "division": "Mymensingh"
+  },
+  {
+    "id": 8,
+    "title": "Comilla Warmth Wave",
+    "image": "https://example.com/images/comilla-campaign.jpg",
+    "description": "Distributing winter essentials to families in need across Comilla.",
+    "status": "Active",
+    "contactInfo": "comilla@warmhaven.org",
+    "division": "Comilla"
+  },
+  {
+    "id": 9,
+    "title": "Faridpur Care Campaign",
+    "image": "https://example.com/images/faridpur-campaign.jpg",
+    "description": "Bringing warmth to underprivileged communities in Faridpur.",
+    "status": "Completed",
+    "contactInfo": "faridpur@warmhaven.org",
+    "division": "Faridpur"
+  },
+  {
+    "id": 10,
+    "title": "Rangpur Winter Aid",
+    "image": "https://example.com/images/rangpur-campaign.jpg",
+    "description": "Providing winter clothing and blankets to rural areas in Rangpur.",
+    "status": "Active",
+    "contactInfo": "rangpur@warmhaven.org",
+    "division": "Rangpur"
+  },
+  {
+    "id": 11,
+    "title": "Dinajpur Cozy Drive",
+    "image": "https://example.com/images/dinajpur-campaign.jpg",
+    "description": "Extending warmth to remote families in Dinajpur.",
+    "status": "Active",
+    "contactInfo": "dinajpur@warmhaven.org",
+    "division": "Dinajpur"
+  },
+  {
+    "id": 12,
+    "title": "Jessore Winter Relief",
+    "image": "https://example.com/images/jessore-campaign.jpg",
+    "description": "Join us in providing warm clothing to families in Jessore this winter.",
+    "status": "Upcoming",
+    "contactInfo": "jessore@warmhaven.org",
+    "division": "Jessore"
+  }
+]

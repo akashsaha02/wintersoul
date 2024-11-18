@@ -35,6 +35,14 @@ const Header = () => {
     >
       About
     </NavLink>
+    <NavLink
+      to="/donation-campaigns"
+      className={({ isActive }) =>
+        isActive ? 'btn btn-primary' : 'btn btn-ghost'
+      }
+    >
+      Campaigns
+    </NavLink>
     {
       user && <NavLink
         to="/orders"
@@ -74,7 +82,7 @@ const Header = () => {
             {links}
           </ul>
         </div>
-        <a className="text-xl md:text-2xl font-bold">Auth Context</a>
+        <a className="text-xl md:text-2xl font-bold">WinterSoul</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

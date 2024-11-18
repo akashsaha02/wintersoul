@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from 'firebase/auth';
+import { signOut, sendEmailVerification, updateProfile } from 'firebase/auth';
 import { useContext, useState } from 'react';
 import auth from '../../firebase/firebase.init';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -15,7 +15,7 @@ const Register = () => {
     });
     const [errorMessage, setErrorMessage] = useState("");
     const [success, setSuccess] = useState(false);
-    const [verificationMessage, setVerificationMessage] = useState('');
+    // const [verificationMessage, setVerificationMessage] = useState('');
     const [showPassword, setShowPassword] = useState(false);
 
     const handleChange = (e) => {
@@ -26,7 +26,7 @@ const Register = () => {
         e.preventDefault();
         setSuccess(false);
         setErrorMessage('');
-        setVerificationMessage('');
+        // setVerificationMessage('');
 
         // Password must be at least 6 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
@@ -45,19 +45,11 @@ const Register = () => {
                 const user = userCredential.user;
                 console.log(user);
                 console.log('User registered:', user);
-                setSuccess(true);
-                setFormData({
-                    username: '',
-                    photoUrl: '',
-                    email: '',
-                    password: '',
-                }); // Reset form data
-                e.target.reset();
                 // send email verification address
-                sendEmailVerification(auth.currentUser)
-                    .then(() => {
-                        setVerificationMessage("Verification email sent");
-                    });
+                // sendEmailVerification(auth.currentUser)
+                //     .then(() => {
+                //         setVerificationMessage("Verification email sent");
+                //     });
                 // update user profile
                 updateProfile(auth.currentUser, {
                     displayName: formData.username,
@@ -69,6 +61,23 @@ const Register = () => {
                     console.error('Error updating user profile:', error.code, error.message);
                 }
                 );
+                // Explicitly log the user out after registration
+                signOut(auth) // Log the user out
+                    .then(() => {
+                        console.log('User logged out after registration');
+                    })
+                    .catch(error => {
+                        console.error('Error logging out:', error.code, error.message);
+                    });
+
+                setSuccess(true);
+                setFormData({
+                    username: '',
+                    photoUrl: '',
+                    email: '',
+                    password: '',
+                }); // Reset form data
+                e.target.reset();
             }).catch(error => {
                 const errorMessage = error.message;
                 console.error('Error registering user:', error.code, errorMessage);
@@ -178,7 +187,7 @@ const Register = () => {
 
                 {errorMessage && <p className="text-sm text-red-500">{errorMessage}</p>}
                 {success && <p className="text-sm text-green-500">User registered successfully</p>}
-                {verificationMessage && <p className="text-sm text-blue-500">{verificationMessage}</p>}
+                {/* {verificationMessage && <p className="text-sm text-blue-500">{verificationMessage}</p>} */}
             </div>
         </div>
     );

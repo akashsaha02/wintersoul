@@ -1,11 +1,19 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
+import { useDonation } from '../../providers/DonationProvider';
+import Slider from '../../components/Slider/Slider';
+
+
 
 const Home = () => {
-  return (
-    <div>
-      Home
-    </div>
-  )
-}
 
-export default Home
+  const { campaigns } = useDonation();
+
+  console.log(campaigns)
+
+  return (
+    <Slider/>
+  );
+};
+
+export default Home;
+
