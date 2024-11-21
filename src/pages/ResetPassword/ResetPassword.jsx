@@ -33,7 +33,7 @@ const ResetPassword = () => {
                 <h2 className="text-2xl font-bold text-center text-gray-700">Reset Your Password</h2>
                 <hr className='my-4'></hr>
                 <p className="text-sm text-center text-gray-600">
-                    Enter your email below, and we'll redirect you to reset your password.
+                    Enter your email below, and we&apos;ll redirect you to reset your password.
                 </p>
                 <form onSubmit={handleSubmit} className="space-y-5">
                     <div>

@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const UpdateProfile = () => {
     const { user } = useContext(AuthContext);
