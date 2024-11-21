@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import logo from '../../../public/2077008.png';
 
 const Header = () => {
   const { user } = useContext(AuthContext);
@@ -80,8 +81,9 @@ const Header = () => {
           </div>
           <h2
             onClick={() => navigate("/")}
-            className="text-xl md:text-3xl font-bold cursor-pointer"
+            className="text-xl md:text-3xl font-bold cursor-pointer flex items-center gap-2"
           >
+            <span className=""><img className='w-10 h-10' src={logo} alt=""/></span>
             WinterSoul
           </h2>
         </div>
@@ -92,7 +94,7 @@ const Header = () => {
           <NavLink
             to='/register'
             className={({ isActive }) =>
-              `px-4 py-2 md:text-sm lg:text-md font-semibold rounded-lg mr-2 ${isActive ? 'bg-indigo-600 text-white' : 'bg-transparent'
+              `px-4 py-2 md:text-sm lg:text-md font-semibold rounded-lg ${isActive ? 'bg-indigo-600 text-white' : 'bg-transparent'
               }`
             }
           >
@@ -102,7 +104,7 @@ const Header = () => {
             to="/login"
             // onClick={user ? handleLogin : null}
             className={({ isActive }) =>
-              `px-4 py-2 md:text-sm lg:text-md font-semibold rounded-lg mr-2 ${isActive ? 'bg-indigo-600 text-white' : 'bg-transparent'
+              `px-4 py-2 md:text-sm lg:text-md font-semibold rounded-lg  ${isActive ? 'bg-indigo-600 text-white' : 'bg-transparent'
               }`
             }
           >

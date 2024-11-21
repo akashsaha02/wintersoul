@@ -48,7 +48,7 @@ const HowToHelp = () => {
         data-aos="fade-up"
         data-aos-delay="200"
       >
-        <h2 className="text-2xl font-bold text-center text-gray-800">
+        <h2 className="text-3xl font-bold text-center text-gray-800">
           Ways You Can Contribute
         </h2>
         <p className="text-center text-gray-600 mt-2">
@@ -114,12 +114,15 @@ const HowToHelp = () => {
         data-aos="fade-up"
         data-aos-delay="400"
       >
-        <h2 className="text-2xl font-bold text-center text-gray-800">
+        <h2 className="text-3xl font-bold text-center text-gray-800">
           Hear From the Community
         </h2>
-        <div className="flex flex-wrap justify-center gap-6 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
           {/* Testimonial 1 */}
-          <div className="bg-white shadow-lg rounded-lg p-6 max-w-xs" data-aos="fade-right">
+          <div
+            className="bg-white shadow-lg rounded-lg p-6"
+            data-aos="fade-right"
+          >
             <p className="text-gray-600">
               "WinterSoul's donation drive gave me hope during the coldest days. Their kindness is truly inspiring."
             </p>
@@ -129,13 +132,41 @@ const HowToHelp = () => {
           </div>
 
           {/* Testimonial 2 */}
-          <div className="bg-white shadow-lg rounded-lg p-6 max-w-xs" data-aos="fade-left">
+          <div
+            className="bg-white shadow-lg rounded-lg p-6"
+            data-aos="fade-left"
+          >
             <p className="text-gray-600">
-              "Volunteering with WinterSoul has been a life-changing experience.
-              I feel so connected to the community."
+              "Volunteering with WinterSoul has been a life-changing experience. I feel so connected to the community."
             </p>
             <div className="mt-4 text-right text-gray-800 font-semibold">
               - John, Volunteer
+            </div>
+          </div>
+
+          {/* Testimonial 3 */}
+          <div
+            className="bg-white shadow-lg rounded-lg p-6"
+            data-aos="fade-right"
+          >
+            <p className="text-gray-600">
+              "I received warm clothing when I needed it most. I’m forever grateful to WinterSoul."
+            </p>
+            <div className="mt-4 text-right text-gray-800 font-semibold">
+              - Maria, Beneficiary
+            </div>
+          </div>
+
+          {/* Testimonial 4 */}
+          <div
+            className="bg-white shadow-lg rounded-lg p-6"
+            data-aos="fade-left"
+          >
+            <p className="text-gray-600">
+              "Collaborating with WinterSoul has brought our community closer. We’ve achieved so much together."
+            </p>
+            <div className="mt-4 text-right text-gray-800 font-semibold">
+              - Ahmed, Partner
             </div>
           </div>
         </div>
@@ -160,6 +191,7 @@ const HowToHelp = () => {
           Get Involved
         </button>
       </div>
+
     </div>
   );
 };
