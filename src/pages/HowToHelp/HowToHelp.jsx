@@ -66,7 +66,7 @@ const HowToHelp = () => {
             </p>
             <button
               className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 w-full"
-              onClick={() => navigate("/donate")}
+              onClick={() => navigate("/donation-campaigns")}
             >
               Learn More
             </button>
@@ -83,7 +83,7 @@ const HowToHelp = () => {
             </p>
             <button
               className="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 w-full"
-              onClick={() => navigate("/volunteer")}
+              onClick={() => navigate("/register")}
             >
               Sign Up
             </button>
@@ -100,7 +100,7 @@ const HowToHelp = () => {
             </p>
             <button
               className="mt-4 px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 w-full"
-              onClick={() => navigate("/campaigns")}
+              onClick={() => navigate("/donation-campaigns")}
             >
               Become a Sponsor
             </button>
