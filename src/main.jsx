@@ -15,6 +15,7 @@ import CampaignsPage from './pages/CampaignsPage/CampaignsPage'
 import DonationDetails from './pages/DonationDetails/DonationDetails'
 import Dashboard from './pages/Dashboard/Dashboard'
 import HowToHelp from './pages/HowToHelp/HowToHelp'
+import UpdateProfile from './pages/UpdateProfile/UpdateProfile'
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       {
         path: '/dashboard',
         element: <PrivateRoute>
-          <Dashboard/>
+          <Dashboard />
         </PrivateRoute>
       },
       {
@@ -52,8 +53,14 @@ const router = createBrowserRouter([
           </PrivateRoute>
       },
       {
-        path:'/help',
-        element: <HowToHelp/>
+        path: '/help',
+        element: <HowToHelp />
+      },
+      {
+        path: '/update-profile',
+        element: <PrivateRoute>
+          <UpdateProfile />
+        </PrivateRoute>
       }
     ]
   }
