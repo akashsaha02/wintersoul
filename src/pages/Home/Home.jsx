@@ -29,6 +29,11 @@ const Home = () => {
         <Slider />
       </div>
 
+      {/* About Section */}
+      <div data-aos="fade-up">
+        <AboutSection />
+      </div>
+
       {/* How It Works Section */}
       <div data-aos="fade-up">
         <HowItWorks />
@@ -39,10 +44,7 @@ const Home = () => {
         <Impact />
       </div>
 
-      {/* About Section */}
-      <div data-aos="fade-up">
-        <AboutSection />
-      </div>
+
 
       {/* Testimonial Section */}
       <div data-aos="fade-up">

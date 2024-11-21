@@ -55,8 +55,8 @@ const Header = () => {
 
 
   return (
-    <div className='bg-blue-200'>
-      <div className="navbar max-w-[1440px] mx-auto px-4  sticky top-0 z-50">
+    <div className='bg-white sticky top-0 z-50 shadow-md'>
+      <div className="navbar max-w-[1440px] mx-auto px-4">
         <div className="navbar-start items-center">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="mr-3 lg:hidden">
