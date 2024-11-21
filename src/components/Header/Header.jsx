@@ -90,7 +90,7 @@ const Header = () => {
         </div>
         <div className="navbar-end gap-2">
           <NavLink
-            to={user ? '/dashboard' : '/register'}
+            to='/register'
             className={({ isActive }) =>
               `px-4 py-2 md:text-sm lg:text-md font-semibold rounded-lg mr-2 ${isActive ? 'bg-indigo-600 text-white' : 'bg-transparent'
               }`

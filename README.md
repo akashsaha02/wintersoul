@@ -15,7 +15,7 @@ During the harsh winter months, many vulnerable individuals lack sufficient warm
 
 ## **Live URL**
 
-[WinterSoul Live Website](#)  
+[WinterSoul Live Website](https://assignment-09-8a172.web.app/)  
 
 ---
 
@@ -44,7 +44,7 @@ During the harsh winter months, many vulnerable individuals lack sufficient warm
 - Update profile feature with Firebase integration.
 
 ### **Animations**
-- Smooth page transitions and interactive elements implemented using AOS or Animate.css.
+- Smooth page transitions and interactive elements implemented using AOS.
 
 ### **404 Error Page**
 - Custom-designed error page with a navigation button to redirect to the home route.
@@ -58,7 +58,7 @@ During the harsh winter months, many vulnerable individuals lack sufficient warm
 3. **Tailwind CSS** - For styling and responsive design.
 4. **DaisyUI** - For pre-built UI components.
 5. **React Icons** - For social and utility icons.
-6. **AOS / Animate.css** - For animations and transitions.
+6. **AOS** - For animations and transitions.
 7. **React Hot Toast** - For displaying toast notifications.
 
 ---

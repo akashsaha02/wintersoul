@@ -8,7 +8,7 @@ const Dashboard = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="min-h-screen flex flex-col items-center py-8">
+        <div className="min-h-screen flex flex-col items-center justify-center py-8">
             <Helmet>
                 <title>WinterSoul | Dashboard</title>
             </Helmet>
