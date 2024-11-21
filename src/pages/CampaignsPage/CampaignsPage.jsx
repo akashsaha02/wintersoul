@@ -49,12 +49,12 @@ const CampaignsPage = () => {
                 >
                   View Details
                 </Link>
-                <button
-                  onClick={() => navigate(`/donation-campaigns/${campaign.id}`)}
+                <Link
+                  to={`/donation-campaigns/${campaign.id}`}
                   className="bg-indigo-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-indigo-700 transition duration-200 text-md"
                 >
                   Donate Now
-                </button>
+                </Link>
               </div>
             </div>
           </div>
