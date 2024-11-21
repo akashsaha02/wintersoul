@@ -4,6 +4,7 @@
     "title": "Sylhet Winter Warmth",
     "image": "https://example.com/images/sylhet-warmth.jpg",
     "description": "A drive to collect winter essentials for remote villages in Sylhet.",
+    "longDescription": "The Sylhet Winter Warmth campaign aims to provide warm clothing and blankets to people living in remote and underprivileged areas of Sylhet. Volunteers will visit villages to distribute items directly to families. Your donation can help protect them from the harsh winter cold.",
     "status": "Upcoming",
     "contactInfo": "warmth@sylhet.org | +880113344556",
     "division": "Sylhet"
@@ -13,6 +14,7 @@
     "title": "Barishal Kindness Drive",
     "image": "https://example.com/images/barishal-kindness.jpg",
     "description": "Distributing winter essentials to those in need in Barishal.",
+    "longDescription": "The Barishal Kindness Drive has successfully distributed winter essentials such as jackets, blankets, and warm clothes to over 500 families in need. This initiative focused on reaching out to marginalized communities and elderly individuals living in rural areas.",
     "status": "Completed",
     "contactInfo": "kindness@barishal.org | +880223344556",
     "division": "Barishal"
@@ -22,6 +24,7 @@
     "title": "Rajshahi Care Drive",
     "image": "https://example.com/images/rajshahi-care.jpg",
     "description": "Providing winter clothes for underprivileged children in Rajshahi.",
+    "longDescription": "The Rajshahi Care Drive is dedicated to supporting children in underprivileged communities by providing them with warm clothes. Volunteers are organizing collection points in urban areas to gather donations, ensuring they reach the children before the winter peak.",
     "status": "Ongoing",
     "contactInfo": "care@rajshahidrive.org | +880998832211",
     "division": "Rajshahi"
@@ -31,6 +34,7 @@
     "title": "Khulna Kindness Campaign",
     "image": "https://example.com/images/khulna-kindness.jpg",
     "description": "Join our efforts to distribute warm jackets to children in Khulna.",
+    "longDescription": "This campaign successfully distributed over 1,000 warm jackets to children in need across Khulna. Focused on improving the living conditions of those in extreme poverty, the Kindness Campaign was a beacon of hope during the harsh winter.",
     "status": "Completed",
     "contactInfo": "kindness@khulna.org | +880667788990",
     "division": "Khulna"
@@ -40,6 +44,7 @@
     "title": "Chattogram Shelter Aid",
     "image": "https://example.com/images/chattogram-shelter.jpg",
     "description": "Providing blankets and jackets to street dwellers in Chattogram.",
+    "longDescription": "The Chattogram Shelter Aid program focuses on providing immediate relief to street dwellers by distributing blankets and jackets. Volunteers actively identify individuals in need and ensure they receive warm clothing during the coldest nights.",
     "status": "Ongoing",
     "contactInfo": "aid@chattogramshelter.org | +880564738291",
     "division": "Chattogram"
@@ -49,6 +54,7 @@
     "title": "Chattogram Winter Drive",
     "image": "https://example.com/images/chattogram-drive.jpg",
     "description": "Donate winter clothes to support vulnerable communities in Chattogram.",
+    "longDescription": "This completed drive was instrumental in collecting and distributing winter clothes to over 700 families in Chattogram. It brought together donors, volunteers, and NGOs to reach remote and urban areas alike.",
     "status": "Completed",
     "contactInfo": "support@winterdrive.org | +880987654321",
     "division": "Chattogram"
@@ -58,6 +64,7 @@
     "title": "Dhaka Winter Hope Drive",
     "image": "https://example.com/images/dhaka-hope.jpg",
     "description": "Join us to bring warmth to homeless people in Dhaka city.",
+    "longDescription": "The Dhaka Winter Hope Drive is an upcoming event focusing on providing homeless individuals in Dhaka with essential winter clothing. The campaign will prioritize high-traffic areas where homelessness is most prevalent.",
     "status": "Upcoming",
     "contactInfo": "dhakahope@winterdrive.org | +880123987654",
     "division": "Dhaka"
@@ -67,6 +74,7 @@
     "title": "Khulna Winter Relief",
     "image": "https://example.com/images/khulna-relief.jpg",
     "description": "Bringing warmth to underprivileged communities in Khulna.",
+    "longDescription": "The Khulna Winter Relief program is currently active, aiming to deliver warm clothes and blankets to low-income families. Volunteers have set up multiple donation centers to ensure wide coverage in both urban and rural areas.",
     "status": "Ongoing",
     "contactInfo": "help@khulnarelief.org | +880556677889",
     "division": "Khulna"
@@ -76,6 +84,7 @@
     "title": "Barishal Winter Aid",
     "image": "https://example.com/images/barishal-aid.jpg",
     "description": "Supporting rural communities in Barishal with winter clothing.",
+    "longDescription": "Barishal Winter Aid is reaching out to rural communities to provide warm clothes and essentials to those most affected by the cold. The campaign includes educational sessions on how to stay warm during extreme weather conditions.",
     "status": "Ongoing",
     "contactInfo": "winteraid@barishal.org | +880445566778",
     "division": "Barishal"
@@ -85,6 +94,7 @@
     "title": "Rajshahi Warmth Initiative",
     "image": "https://example.com/images/rajshahi-warmth.jpg",
     "description": "A campaign to collect and distribute warm clothes in Rajshahi.",
+    "longDescription": "The Rajshahi Warmth Initiative encourages community participation by hosting collection drives at schools, colleges, and offices. All collected items are sorted and distributed to vulnerable groups across the region.",
     "status": "Upcoming",
     "contactInfo": "contact@rajshahiwarmth.org | +880998877665",
     "division": "Rajshahi"
@@ -94,6 +104,7 @@
     "title": "Warm Hearts Campaign",
     "image": "https://example.com/images/warm-hearts.jpg",
     "description": "Help provide warm clothing to families in Dhaka this winter.",
+    "longDescription": "The Warm Hearts Campaign is focused on collecting donations to provide winter clothes to underprivileged families in Dhaka. This ongoing initiative has already impacted hundreds of lives, offering hope and comfort during the cold season.",
     "status": "Ongoing",
     "contactInfo": "contact@warmhearts.org | +880123456789",
     "division": "Dhaka"
@@ -103,6 +114,7 @@
     "title": "Sylhet Blanket Distribution",
     "image": "https://example.com/images/sylhet-blanket.jpg",
     "description": "Join us in distributing blankets to those in need in Sylhet.",
+    "longDescription": "The Sylhet Blanket Distribution campaign is working tirelessly to reach isolated communities and provide them with blankets to combat the cold. Volunteers ensure that all donations directly benefit the intended recipients.",
     "status": "Ongoing",
     "contactInfo": "info@sylhetblanket.org | +880112233445",
     "division": "Sylhet"
