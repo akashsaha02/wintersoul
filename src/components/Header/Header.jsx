@@ -18,40 +18,52 @@ const Header = () => {
     }
   };
 
-  const links = <>
-    <NavLink
-      to="/"
-      className={({ isActive }) =>
-        isActive ? 'btn btn-primary' : 'btn btn-ghost'
-      }
-    >
-      Home
-    </NavLink>
-    <NavLink
-      to="/about"
-      className={({ isActive }) =>
-        isActive ? 'btn btn-primary' : 'btn btn-ghost'
-      }
-    >
-      About
-    </NavLink>
-    <NavLink
-      to="/donation-campaigns"
-      className={({ isActive }) =>
-        isActive ? 'btn btn-primary' : 'btn btn-ghost'
-      }
-    >
-      Campaigns
-    </NavLink>
-    {
-      user && <NavLink
-        to="/orders"
-        className={({ isActive }) => isActive ? 'btn btn-primary' : 'btn btn-ghost'}
+  const links = (
+    <>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive ? 'btn btn-primary' : 'btn btn-ghost'
+        }
       >
-        Orders
+        Home
       </NavLink>
-    }
-  </>
+      <NavLink
+        to="/donation-campaigns"
+        className={({ isActive }) =>
+          isActive ? 'btn btn-primary' : 'btn btn-ghost'
+        }
+      >
+        Donation Campaigns
+      </NavLink>
+      <NavLink
+        to="/help"
+        className={({ isActive }) =>
+          isActive ? 'btn btn-primary' : 'btn btn-ghost'
+        }
+      >
+        How to Help?
+      </NavLink>
+      <NavLink
+        to="/about"
+        className={({ isActive }) =>
+          isActive ? 'btn btn-primary' : 'btn btn-ghost'
+        }
+      >
+        About
+      </NavLink>
+      {user && (
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) =>
+            isActive ? 'btn btn-primary' : 'btn btn-ghost'
+          }
+        >
+          Dashboard
+        </NavLink>
+      )}
+    </>
+  );
 
   console.log('Current user:', user);
 
@@ -82,12 +94,15 @@ const Header = () => {
             {links}
           </ul>
         </div>
-        <h2 onClick={()=>navigate("/")} className="text-xl md:text-2xl font-bold cursor-pointer">WinterSoul</h2>
+        <h2
+          onClick={() => navigate("/")}
+          className="text-xl md:text-2xl font-bold cursor-pointer"
+        >
+          WinterSoul
+        </h2>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {links}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end gap-2">
         <NavLink
@@ -105,7 +120,17 @@ const Header = () => {
             isActive ? 'btn btn-secondary' : 'btn btn-ghost'
           }
         >
-          {user ? 'Logout' : 'Login'}
+          {user ? (
+            <div className="text-center rounded-md flex flex-col justify-center items-center gap-2">
+              <img
+                src={user.photoURL}
+                alt="Avatar"
+                className="w-10 rounded-full border-2 border-red-500"
+              />
+            </div>
+          ) : (
+            'Login'
+          )}
         </NavLink>
       </div>
     </div>
