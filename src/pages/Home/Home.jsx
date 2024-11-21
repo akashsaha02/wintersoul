@@ -10,8 +10,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 
 const Home = () => {
-  const { campaigns } = useDonation();
-
   useEffect(() => {
     AOS.init({
       duration: 1000, // Animation duration (in ms)

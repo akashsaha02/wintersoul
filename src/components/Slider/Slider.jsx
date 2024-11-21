@@ -42,7 +42,7 @@ const SliderComponent = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="w-full max-w-[1440px] mx-auto my-4 md:my-6">
+        <div className="max-w-[300px] sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-7xl 2xl:max-w-[1440px] mx-auto my-4 md:my-6">
             <Swiper
                 modules={[Navigation, Pagination, EffectFade, Autoplay]}
                 effect="fade"
@@ -64,7 +64,7 @@ const SliderComponent = () => {
                                 className="w-full h-64 md:h-96 object-cover rounded-lg"
                             />
                             {/* Overlay */}
-                            <div className="absolute inset-0 bg-blue-900 bg-opacity-60 flex flex-col justify-center items-center text-center px-4">
+                            <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center px-4">
                                 <h2 className="text-white text-2xl md:text-4xl font-bold mb-2">
                                     {slide.title}
                                 </h2>

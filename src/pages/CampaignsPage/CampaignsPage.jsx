@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useDonation } from "../../providers/DonationProvider";
 import bgImg from "../../assets/360_F_843622716_EBd9rtjvMJjHezFV0bTEPrOQ5LZ88p1S.jpg";
+import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css"; // AOS styles
 
@@ -19,6 +20,9 @@ const CampaignsPage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>WinterSoul | Donation Campaigns</title>
+      </Helmet>
       <div
         className="relative h-64 md:h-80 lg:h-96 bg-cover bg-center my-6 rounded-xl overflow-hidden"
         style={{ backgroundImage: `url(${bgImg})` }}
