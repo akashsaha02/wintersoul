@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { AuthContext } from '../../providers/AuthProvider'
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Dashboard = () => {
     const { user } = useContext(AuthContext);
@@ -8,6 +9,9 @@ const Dashboard = () => {
 
     return (
         <div className="min-h-screen flex flex-col items-center py-8">
+            <Helmet>
+                <title>WinterSoul | Dashboard</title>
+            </Helmet>
             {/* Banner Section */}
             <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">
                 <div className="">
@@ -22,7 +26,7 @@ const Dashboard = () => {
                 </div>
                 <div className="text-center py-8">
                     <h1 className="text-2xl font-semibold text-gray-800">
-                       Welcome back, {user?.displayName || "User Name"}
+                        Welcome back, {user?.displayName || "User Name"}
                     </h1>
                     <p className="text-gray-500">Email: {user?.email || "user@example.com"}</p>
                     <div className="flex justify-center mt-4 space-x-4">

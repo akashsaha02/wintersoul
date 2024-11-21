@@ -34,6 +34,9 @@ const UpdateProfile = () => {
 
     return (
         <div className="min-h-screen bg-gray-100 flex flex-col items-center py-8">
+            <Helmet>
+                <title>WinterSoul | Update Profile</title>
+            </Helmet>
             <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-6">
                 <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                     Update Profile

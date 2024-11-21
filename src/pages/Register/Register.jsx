@@ -5,10 +5,11 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from '../../providers/AuthProvider';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
-    const navigate=useNavigate();
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         username: '',
@@ -96,9 +97,13 @@ const Register = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen px-4">
+        <div className="flex items-center justify-center min-h-screen my-6">
+            <Helmet>
+                <title>WinterSoul | Register</title>
+            </Helmet>
             <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-lg">
                 <h2 className="text-2xl font-bold text-center text-gray-700">Create an Account</h2>
+                <hr className='my-4'></hr>
                 <form onSubmit={handleSubmit} className="space-y-5">
 
                     <div>
@@ -185,7 +190,7 @@ const Register = () => {
 
                 <p className="text-sm text-center text-gray-600">
                     Already have an account?{' '}
-                    <span onClick={()=>navigate("/login")} className="text-blue-500 hover:underline">
+                    <span onClick={() => navigate("/login")} className="text-blue-500 hover:underline">
                         Log in
                     </span>
                 </p>

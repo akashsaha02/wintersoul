@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { Helmet } from 'react-helmet';
+
 
 const ResetPassword = () => {
     const navigate = useNavigate();
@@ -23,9 +25,13 @@ const ResetPassword = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-50 px-4">
+        <div className="flex items-center justify-center min-h-screen my-6">
+            <Helmet>
+                <title>WinterSoul | Reset Password</title>
+            </Helmet>
             <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold text-center text-gray-700">Reset Your Password</h2>
+                <hr className='my-4'></hr>
                 <p className="text-sm text-center text-gray-600">
                     Enter your email below, and we'll redirect you to reset your password.
                 </p>

@@ -3,6 +3,8 @@ import { AuthContext } from '../../providers/AuthProvider';
 import { FaGoogle } from "react-icons/fa";
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+
 
 const Login = () => {
     const { user, loginUser, googleSignIn, logoutUser } = useContext(AuthContext);
@@ -53,7 +55,10 @@ const Login = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen px-4">
+        <div className="flex items-center justify-center min-h-screen my-6">
+            <Helmet>
+                <title>WinterSoul | Login</title>
+            </Helmet>
             <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-lg">
                 {user ? (
                     <div className="">
@@ -75,6 +80,7 @@ const Login = () => {
 
                         <div className="">
                             <h2 className="text-2xl font-bold text-center text-gray-700">Login to Your Account</h2>
+                            <hr className='my-4'></hr>
                             <form onSubmit={handleSubmit} className="space-y-5">
                                 <div>
                                     <label htmlFor="email" className="block text-sm font-medium text-gray-600">
@@ -140,7 +146,7 @@ const Login = () => {
 
                                 <p className="text-sm text-center text-gray-600">
                                     Don't have an account?{' '}
-                                    <span onClick={()=>navigate("/register")} href="/register" className="text-blue-500 hover:underline">
+                                    <span onClick={() => navigate("/register")} href="/register" className="text-blue-500 hover:underline">
                                         Register here
                                     </span>
                                 </p>

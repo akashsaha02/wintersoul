@@ -1,11 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from 'react-helmet';
+
 
 const HowToHelp = () => {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>WinterSoul | How To Help</title>
+      </Helmet>
       {/* Hero Section */}
       <div
         className="relative h-64 md:h-80 lg:h-96 bg-cover bg-center"
