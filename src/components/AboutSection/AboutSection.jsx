@@ -63,7 +63,7 @@ const AboutSection = () => {
                     </p>
                     <button
                         onClick={() => navigate("/donation-campaigns")}
-                        className="bg-indigo-600 text-white py-2 px-6 rounded-lg shadow-md hover:bg-indigo-700 transition duration-200 text-lg"
+                        className="bg-indigo-600 text-white py-2 font-bold px-6 rounded-lg shadow-md hover:bg-indigo-700 transition duration-200 text-lg"
                         data-aos="fade-left"
                         data-aos-delay="600"
                     >
@@ -93,7 +93,7 @@ const AboutSection = () => {
             <div className="flex justify-center items-center py-6" data-aos="zoom-in">
                 <button
                     onClick={() => navigate("/donation-campaigns")}
-                    className="bg-indigo-600 text-white py-2 px-6 rounded-lg shadow-md hover:bg-indigo-700 transition duration-200 text-lg"
+                    className="bg-indigo-600 text-white py-2 px-6 rounded-lg shadow-md font-bold hover:bg-indigo-700 transition duration-200 text-lg"
                 >
                     Donate Now
                 </button>

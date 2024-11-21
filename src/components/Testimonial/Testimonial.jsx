@@ -47,7 +47,7 @@ const Testimonial = () => {
             <div className="flex justify-center mt-12">
                 <button
                     onClick={() => navigate("/donation-campaigns")}
-                    className="bg-indigo-600 text-white py-3 px-8 rounded-lg shadow-md hover:bg-indigo-700 transition duration-200 text-lg"
+                    className="bg-indigo-600 text-white py-3 px-8 rounded-lg shadow-md font-bold hover:bg-indigo-700 transition duration-200 text-lg"
                 >
                     Get Involved
                 </button>

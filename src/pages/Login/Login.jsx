@@ -60,7 +60,7 @@ const Login = () => {
                 {user ? (
                     <div className="">
                         <div className="p-4 text-center text-green-600 bg-green-100 rounded-md flex flex-col justify-center items-center gap-2">
-                            <img src={user.photoURL} alt="Avatar" className="w-20 rounded-full border-2 border-red-500" />
+                            <img src={user.photoURL} alt="Avatar" className="w-20 h-20 object-cover rounded-full border-2 border-red-500" />
                             <p className="">Logged in successfully! {user.displayName || user.email}</p>
                         </div>
                         <button
