@@ -82,7 +82,7 @@ const Header = () => {
             {links}
           </ul>
         </div>
-        <a className="text-xl md:text-2xl font-bold">WinterSoul</a>
+        <h2 onClick={()=>navigate("/")} className="text-xl md:text-2xl font-bold cursor-pointer">WinterSoul</h2>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

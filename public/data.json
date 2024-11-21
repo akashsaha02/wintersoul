@@ -1,110 +1,110 @@
 [
   {
-    "id": 1,
-    "title": "Warmth for Dhaka",
-    "image": "https://example.com/images/dhaka-campaign.jpg",
-    "description": "Help us distribute warm clothes to underprivileged families in Dhaka this winter.",
-    "status": "Active",
-    "contactInfo": "dhaka@warmhaven.org",
-    "division": "Dhaka"
+    "id": 6,
+    "title": "Sylhet Winter Warmth",
+    "image": "https://example.com/images/sylhet-warmth.jpg",
+    "description": "A drive to collect winter essentials for remote villages in Sylhet.",
+    "status": "Upcoming",
+    "contactInfo": "warmth@sylhet.org | +880113344556",
+    "division": "Sylhet"
   },
   {
-    "id": 2,
-    "title": "Cozy Care in Chattogram",
-    "image": "https://example.com/images/chattogram-campaign.jpg",
-    "description": "Join our mission to spread warmth in the hill tracts and coastal areas of Chattogram.",
-    "status": "Active",
-    "contactInfo": "chattogram@warmhaven.org",
+    "id": 11,
+    "title": "Barishal Kindness Drive",
+    "image": "https://example.com/images/barishal-kindness.jpg",
+    "description": "Distributing winter essentials to those in need in Barishal.",
+    "status": "Completed",
+    "contactInfo": "kindness@barishal.org | +880223344556",
+    "division": "Barishal"
+  },
+  {
+    "id": 8,
+    "title": "Rajshahi Care Drive",
+    "image": "https://example.com/images/rajshahi-care.jpg",
+    "description": "Providing winter clothes for underprivileged children in Rajshahi.",
+    "status": "Ongoing",
+    "contactInfo": "care@rajshahidrive.org | +880998832211",
+    "division": "Rajshahi"
+  },
+  {
+    "id": 10,
+    "title": "Khulna Kindness Campaign",
+    "image": "https://example.com/images/khulna-kindness.jpg",
+    "description": "Join our efforts to distribute warm jackets to children in Khulna.",
+    "status": "Completed",
+    "contactInfo": "kindness@khulna.org | +880667788990",
+    "division": "Khulna"
+  },
+  {
+    "id": 4,
+    "title": "Chattogram Shelter Aid",
+    "image": "https://example.com/images/chattogram-shelter.jpg",
+    "description": "Providing blankets and jackets to street dwellers in Chattogram.",
+    "status": "Ongoing",
+    "contactInfo": "aid@chattogramshelter.org | +880564738291",
     "division": "Chattogram"
   },
   {
     "id": 3,
-    "title": "Sylhet Winter Relief",
-    "image": "https://example.com/images/sylhet-campaign.jpg",
-    "description": "Support families in Sylhet to stay warm with blankets and winter clothing.",
-    "status": "Active",
-    "contactInfo": "sylhet@warmhaven.org",
-    "division": "Sylhet"
+    "title": "Chattogram Winter Drive",
+    "image": "https://example.com/images/chattogram-drive.jpg",
+    "description": "Donate winter clothes to support vulnerable communities in Chattogram.",
+    "status": "Completed",
+    "contactInfo": "support@winterdrive.org | +880987654321",
+    "division": "Chattogram"
   },
   {
-    "id": 4,
-    "title": "Khulna Winter Drive",
-    "image": "https://example.com/images/khulna-campaign.jpg",
-    "description": "Deliver warm essentials to remote villages in the Khulna division.",
-    "status": "Completed",
-    "contactInfo": "khulna@warmhaven.org",
+    "id": 2,
+    "title": "Dhaka Winter Hope Drive",
+    "image": "https://example.com/images/dhaka-hope.jpg",
+    "description": "Join us to bring warmth to homeless people in Dhaka city.",
+    "status": "Upcoming",
+    "contactInfo": "dhakahope@winterdrive.org | +880123987654",
+    "division": "Dhaka"
+  },
+  {
+    "id": 9,
+    "title": "Khulna Winter Relief",
+    "image": "https://example.com/images/khulna-relief.jpg",
+    "description": "Bringing warmth to underprivileged communities in Khulna.",
+    "status": "Ongoing",
+    "contactInfo": "help@khulnarelief.org | +880556677889",
     "division": "Khulna"
   },
   {
-    "id": 5,
-    "title": "Rajshahi Cozy Campaign",
-    "image": "https://example.com/images/rajshahi-campaign.jpg",
-    "description": "Provide winter gear to families in need across Rajshahi city and surrounding areas.",
-    "status": "Upcoming",
-    "contactInfo": "rajshahi@warmhaven.org",
-    "division": "Rajshahi"
-  },
-  {
-    "id": 6,
-    "title": "Barishal Blanket Drive",
-    "image": "https://example.com/images/barishal-campaign.jpg",
-    "description": "Help us keep vulnerable communities warm in Barishal this chilly season.",
-    "status": "Active",
-    "contactInfo": "barishal@warmhaven.org",
+    "id": 12,
+    "title": "Barishal Winter Aid",
+    "image": "https://example.com/images/barishal-aid.jpg",
+    "description": "Supporting rural communities in Barishal with winter clothing.",
+    "status": "Ongoing",
+    "contactInfo": "winteraid@barishal.org | +880445566778",
     "division": "Barishal"
   },
   {
     "id": 7,
-    "title": "Mymensingh Kindness Drive",
-    "image": "https://example.com/images/mymensingh-campaign.jpg",
-    "description": "Join hands to ensure warmth and care for Mymensingh’s disadvantaged communities.",
+    "title": "Rajshahi Warmth Initiative",
+    "image": "https://example.com/images/rajshahi-warmth.jpg",
+    "description": "A campaign to collect and distribute warm clothes in Rajshahi.",
     "status": "Upcoming",
-    "contactInfo": "mymensingh@warmhaven.org",
-    "division": "Mymensingh"
+    "contactInfo": "contact@rajshahiwarmth.org | +880998877665",
+    "division": "Rajshahi"
   },
   {
-    "id": 8,
-    "title": "Comilla Warmth Wave",
-    "image": "https://example.com/images/comilla-campaign.jpg",
-    "description": "Distributing winter essentials to families in need across Comilla.",
-    "status": "Active",
-    "contactInfo": "comilla@warmhaven.org",
-    "division": "Comilla"
+    "id": 1,
+    "title": "Warm Hearts Campaign",
+    "image": "https://example.com/images/warm-hearts.jpg",
+    "description": "Help provide warm clothing to families in Dhaka this winter.",
+    "status": "Ongoing",
+    "contactInfo": "contact@warmhearts.org | +880123456789",
+    "division": "Dhaka"
   },
   {
-    "id": 9,
-    "title": "Faridpur Care Campaign",
-    "image": "https://example.com/images/faridpur-campaign.jpg",
-    "description": "Bringing warmth to underprivileged communities in Faridpur.",
-    "status": "Completed",
-    "contactInfo": "faridpur@warmhaven.org",
-    "division": "Faridpur"
-  },
-  {
-    "id": 10,
-    "title": "Rangpur Winter Aid",
-    "image": "https://example.com/images/rangpur-campaign.jpg",
-    "description": "Providing winter clothing and blankets to rural areas in Rangpur.",
-    "status": "Active",
-    "contactInfo": "rangpur@warmhaven.org",
-    "division": "Rangpur"
-  },
-  {
-    "id": 11,
-    "title": "Dinajpur Cozy Drive",
-    "image": "https://example.com/images/dinajpur-campaign.jpg",
-    "description": "Extending warmth to remote families in Dinajpur.",
-    "status": "Active",
-    "contactInfo": "dinajpur@warmhaven.org",
-    "division": "Dinajpur"
-  },
-  {
-    "id": 12,
-    "title": "Jessore Winter Relief",
-    "image": "https://example.com/images/jessore-campaign.jpg",
-    "description": "Join us in providing warm clothing to families in Jessore this winter.",
-    "status": "Upcoming",
-    "contactInfo": "jessore@warmhaven.org",
-    "division": "Jessore"
+    "id": 5,
+    "title": "Sylhet Blanket Distribution",
+    "image": "https://example.com/images/sylhet-blanket.jpg",
+    "description": "Join us in distributing blankets to those in need in Sylhet.",
+    "status": "Ongoing",
+    "contactInfo": "info@sylhetblanket.org | +880112233445",
+    "division": "Sylhet"
   }
 ]

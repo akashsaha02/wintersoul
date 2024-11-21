@@ -1,6 +1,7 @@
 import { useState, useRef, useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import { FaGoogle } from "react-icons/fa";
+import toast from 'react-hot-toast';
 
 const Login = () => {
     const { user, loginUser, googleSignIn } = useContext(AuthContext);
@@ -20,16 +21,20 @@ const Login = () => {
             setFormData({ email: '', password: '' }); // Reset form data
             emailRef.current.value = '';
             passwordRef.current.value = '';
+            toast.success('Logged in successfully!');
         } catch (error) {
             console.error('Error logging in:', error.message);
+            toast.error('Error logging in!');
         }
     };
 
     const handleGoogleSignIn = async () => {
         try {
             await googleSignIn();
+            toast.success('Logged in successfully with Google!');
         } catch (error) {
             console.error('Error logging in with Google:', error.message);
+            toast.error('Error logging in with Google!');
         }
     }
 
@@ -93,6 +98,14 @@ const Login = () => {
                         <FaGoogle />
                         <p className="">Login with Google</p>
                     </button>
+
+                    <hr className="my-4 border-gray-300" />
+                    <p className="text-sm text-center text-gray-600">
+                        Forgot your password?{' '}
+                        <a href="/reset-password" className="text-blue-500 hover:underline">
+                            Reset it here
+                        </a>
+                    </p>
 
 
                     <p className="text-sm text-center text-gray-600">
