@@ -8,12 +8,13 @@ import Home from './pages/Home/Home'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import AuthProvider from './providers/AuthProvider'
-import Orders from './pages/Orders/Orders'
 import PrivateRoute from './routes/PrivateRoute'
 import Error from './pages/Error/Error';
 import DonationProvider from './providers/DonationProvider'
 import CampaignsPage from './pages/CampaignsPage/CampaignsPage'
 import DonationDetails from './pages/DonationDetails/DonationDetails'
+import Dashboard from './pages/Dashboard/Dashboard'
+import HowToHelp from './pages/HowToHelp/HowToHelp'
 
 const router = createBrowserRouter([
   {
@@ -34,9 +35,9 @@ const router = createBrowserRouter([
         element: <Register />
       },
       {
-        path: '/orders',
+        path: '/dashboard',
         element: <PrivateRoute>
-          <Orders />
+          <Dashboard/>
         </PrivateRoute>
       },
       {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
           <PrivateRoute>
             <DonationDetails />
           </PrivateRoute>
+      },
+      {
+        path:'/help',
+        element: <HowToHelp/>
       }
     ]
   }

@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useDonation } from "../../providers/DonationProvider";
 
@@ -6,7 +5,20 @@ const CampaignsPage = () => {
   const { campaigns } = useDonation();
 
   return (
-    <div className="p-6">
+    <div className="">
+      <div
+        className="relative h-64 md:h-80 lg:h-96 bg-cover bg-center"
+        style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?winter,help')" }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center px-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white text-center">
+          Donation Campaigns
+          </h1>
+          <p className="text-sm md:text-lg text-gray-200 mt-2 text-center">
+            Together, we can make this winter warmer for those in need.
+          </p>
+        </div>
+      </div>
       <h1 className="text-3xl font-bold mb-6">Donation Campaigns</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {campaigns.map((campaign) => (

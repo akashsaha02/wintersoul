@@ -5,10 +5,12 @@ import { Toaster } from 'react-hot-toast'
 
 const Layout = () => {
     return (
-        <div className='max-w-7xl mx-auto px-5 min-h-screen grid grid-rows-[auto_1fr_auto]'>
+        <div>
             <Header />
-            <Outlet />
-            <Toaster />
+            <div className='max-w-[1440px] mx-auto px-4 min-h-screen grid grid-rows-[auto_1fr_auto]'>
+                <Outlet />
+                <Toaster />
+            </div>
             <Footer />
         </div>
     )

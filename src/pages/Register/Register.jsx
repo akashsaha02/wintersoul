@@ -3,6 +3,7 @@ import { useContext, useState } from 'react';
 import auth from '../../firebase/firebase.init';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from '../../providers/AuthProvider';
+import toast from 'react-hot-toast';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
@@ -28,13 +29,13 @@ const Register = () => {
         setErrorMessage('');
         // setVerificationMessage('');
 
-        // Password must be at least 6 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.
-        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+        // Password must be at least 6 characters long and include at least one uppercase letter, one lowercase letter.
+        const passwordRegex =/^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
 
         // Validate password
         if (!passwordRegex.test(formData.password)) {
             setErrorMessage(
-                'Password must be at least 6 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.'
+                'Password must be at least 6 characters long and include at least one uppercase letter, one lowercase letter'
             );
             return;
         }
@@ -42,9 +43,10 @@ const Register = () => {
         // Create user using Auth Provider
         createUser(formData.email, formData.password)
             .then(userCredential => {
-                const user = userCredential.user;
-                console.log(user);
-                console.log('User registered:', user);
+                
+                // const user = userCredential.user;
+                // console.log(user);
+                // console.log('User registered:', user);
                 // send email verification address
                 // sendEmailVerification(auth.currentUser)
                 //     .then(() => {
@@ -71,6 +73,7 @@ const Register = () => {
                     });
 
                 setSuccess(true);
+                toast.success('User registered successfully!');
                 setFormData({
                     username: '',
                     photoUrl: '',
@@ -80,9 +83,9 @@ const Register = () => {
                 e.target.reset();
             }).catch(error => {
                 const errorMessage = error.message;
-                console.error('Error registering user:', error.code, errorMessage);
                 setErrorMessage(errorMessage);
                 setSuccess(false);
+                toast.error('Error registering user!');
             });
     };
 

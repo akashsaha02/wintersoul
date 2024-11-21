@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -40,7 +39,7 @@ const SliderComponent = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="w-full max-w-7xl mx-auto my-8">
+        <div className="w-full max-w-[1440px] mx-auto my-4 md:my-6">
             <Swiper
                 modules={[Navigation, Pagination, EffectFade, Autoplay]}
                 effect="fade"
