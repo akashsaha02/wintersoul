@@ -48,8 +48,6 @@ const Register = () => {
             .then(userCredential => {
 
                 // const user = userCredential.user;
-                // console.log(user);
-                // console.log('User registered:', user);
                 // send email verification address
                 // sendEmailVerification(auth.currentUser)
                 //     .then(() => {
@@ -60,19 +58,14 @@ const Register = () => {
                     displayName: formData.username,
                     photoURL: formData.photoUrl
                 }
-                ).then(() => {
-                    console.log('User profile updated');
-                }).catch(error => {
-                    console.error('Error updating user profile:', error.code, error.message);
+                ).catch(error => {
+                    toast.error('Error updating user profile:', error.code, error.message);
                 }
                 );
                 // Explicitly log the user out after registration
-                signOut(auth) // Log the user out
-                    .then(() => {
-                        console.log('User logged out after registration');
-                    })
+                signOut(auth)
                     .catch(error => {
-                        console.error('Error logging out:', error.code, error.message);
+                        toast.error('Error logging out:', error.code, error.message);
                     });
 
                 setSuccess(true);

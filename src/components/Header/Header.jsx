@@ -53,7 +53,6 @@ const Header = () => {
     </>
   );
 
-  console.log('Current user:', user);
 
   return (
     <div className='bg-blue-200'>

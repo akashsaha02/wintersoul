@@ -27,7 +27,6 @@ const Login = () => {
             passwordRef.current.value = '';
             toast.success('Logged in successfully!');
         } catch (error) {
-            console.error('Error logging in:', error.message);
             toast.error('Error logging in!');
         }
     };
@@ -37,7 +36,6 @@ const Login = () => {
             await googleSignIn();
             toast.success('Logged in successfully with Google!');
         } catch (error) {
-            console.error('Error logging in with Google:', error.message);
             toast.error('Error logging in with Google!');
         }
     }
@@ -49,7 +47,6 @@ const Login = () => {
             navigate('/');
 
         } catch (error) {
-            console.error('Error logging out:', error.message);
             toast.error('Error logging out!');
         }
     };

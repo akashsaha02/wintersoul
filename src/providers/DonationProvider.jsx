@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-
+import { createContext, useContext, useEffect, useState } from 'react';
+import { toast } from 'react-hot-toast';
 // Create Context
 const DonationContext = createContext();
 
@@ -12,10 +12,9 @@ const DonationProvider = ({ children }) => {
         fetch('data.json')
             .then((response) => response.json())
             .then((data) => setCampaigns(data))
-            .catch((error) => console.error('Error fetching campaigns:', error));
+            .catch((error) => toast.error('Error fetching campaigns:', error));
     }, []);
 
-    console.log(campaigns);
 
     // Function to get campaigns by status
     const getCampaignsByStatus = (status) => campaigns.filter((campaign) => campaign.status === status);
