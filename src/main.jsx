@@ -16,6 +16,7 @@ import DonationDetails from './pages/DonationDetails/DonationDetails'
 import Dashboard from './pages/Dashboard/Dashboard'
 import HowToHelp from './pages/HowToHelp/HowToHelp'
 import UpdateProfile from './pages/UpdateProfile/UpdateProfile'
+import ResetPassword from './pages/ResetPassword/ResetPassword'
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <UpdateProfile />
         </PrivateRoute>
+      },
+      {
+        path: '/reset-password',
+        element: <ResetPassword />
       }
     ]
   }

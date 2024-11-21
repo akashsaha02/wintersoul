@@ -17,10 +17,9 @@ const Home = () => {
   return (
     <div>
       <Slider />
-
-      <AboutSection />
       <HowItWorks />
       <Impact />
+      <AboutSection />
       <Testimonial />
     </div>
   );

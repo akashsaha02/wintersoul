@@ -4,9 +4,11 @@ import auth from '../../firebase/firebase.init';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from '../../providers/AuthProvider';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
+    const navigate=useNavigate();
 
     const [formData, setFormData] = useState({
         username: '',
@@ -30,7 +32,7 @@ const Register = () => {
         // setVerificationMessage('');
 
         // Password must be at least 6 characters long and include at least one uppercase letter, one lowercase letter.
-        const passwordRegex =/^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
+        const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
 
         // Validate password
         if (!passwordRegex.test(formData.password)) {
@@ -43,7 +45,7 @@ const Register = () => {
         // Create user using Auth Provider
         createUser(formData.email, formData.password)
             .then(userCredential => {
-                
+
                 // const user = userCredential.user;
                 // console.log(user);
                 // console.log('User registered:', user);
@@ -94,8 +96,8 @@ const Register = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-50 px-4">
-            <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
+        <div className="flex items-center justify-center min-h-screen px-4">
+            <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-lg">
                 <h2 className="text-2xl font-bold text-center text-gray-700">Create an Account</h2>
                 <form onSubmit={handleSubmit} className="space-y-5">
 
@@ -183,9 +185,9 @@ const Register = () => {
 
                 <p className="text-sm text-center text-gray-600">
                     Already have an account?{' '}
-                    <a href="/login" className="text-blue-500 hover:underline">
+                    <span onClick={()=>navigate("/login")} className="text-blue-500 hover:underline">
                         Log in
-                    </a>
+                    </span>
                 </p>
 
                 {errorMessage && <p className="text-sm text-red-500">{errorMessage}</p>}
