@@ -11,6 +11,10 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true);
 
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+
+
     const createUser = (email, password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
@@ -28,6 +32,7 @@ const AuthProvider = ({ children }) => {
                 setLoading(false);
             } else {
                 setUser(null);
+                setLoading(false);
             }
         })
 
@@ -47,13 +52,23 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, googleProvider);
     }
 
+    const checkAuth = () => {
+        if (user) {
+            setIsAuthenticated(true);
+        } else {
+            setIsAuthenticated(false);
+        }
+        return isAuthenticated;
+    }
+
     const authInfo = {
         user,
         loading,
         createUser,
         loginUser,
         logoutUser,
-        googleSignIn
+        googleSignIn,
+        checkAuth
     }
     return (
         <AuthContext.Provider value={authInfo}>

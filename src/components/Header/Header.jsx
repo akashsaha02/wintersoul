@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Header = () => {
-  const { user, logoutUser } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const links = (
@@ -11,7 +11,8 @@ const Header = () => {
       <NavLink
         to="/"
         className={({ isActive }) =>
-          isActive ? 'btn btn-primary' : 'btn btn-ghost'
+          `px-4 py-2 md:text-sm lg:text-md font-semibold rounded-lg mr-2 ${isActive ? 'bg-indigo-600 text-white' : 'bg-transparent'
+          }`
         }
       >
         Home
@@ -19,7 +20,8 @@ const Header = () => {
       <NavLink
         to="/donation-campaigns"
         className={({ isActive }) =>
-          isActive ? 'btn btn-primary' : 'btn btn-ghost'
+          `px-4 py-2 md:text-sm lg:text-md font-semibold rounded-lg mr-2 ${isActive ? 'bg-indigo-600 text-white' : 'bg-transparent'
+          }`
         }
       >
         Donation Campaigns
@@ -27,24 +29,18 @@ const Header = () => {
       <NavLink
         to="/help"
         className={({ isActive }) =>
-          isActive ? 'btn btn-primary' : 'btn btn-ghost'
+          `px-4 py-2 md:text-sm lg:text-md font-semibold rounded-lg mr-2 ${isActive ? 'bg-indigo-600 text-white' : 'bg-transparent'
+          }`
         }
       >
         How to Help?
-      </NavLink>
-      <NavLink
-        to="/about"
-        className={({ isActive }) =>
-          isActive ? 'btn btn-primary' : 'btn btn-ghost'
-        }
-      >
-        About
       </NavLink>
       {user && (
         <NavLink
           to="/dashboard"
           className={({ isActive }) =>
-            isActive ? 'btn btn-primary' : 'btn btn-ghost'
+            `px-4 py-2 md:text-sm lg:text-md font-semibold rounded-lg mr-2 ${isActive ? 'bg-indigo-600 text-white' : 'bg-transparent'
+            }`
           }
         >
           Dashboard
@@ -55,8 +51,8 @@ const Header = () => {
 
 
   return (
-    <div className='bg-white sticky top-0 z-50 shadow-md'>
-      <div className="navbar max-w-[1440px] mx-auto px-4">
+    <div className='bg-white sticky top-0 z-50 shadow-md py-2'>
+      <div className="navbar max-w-[1440px] mx-auto">
         <div className="navbar-start items-center">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="mr-3 lg:hidden">
@@ -84,7 +80,7 @@ const Header = () => {
           </div>
           <h2
             onClick={() => navigate("/")}
-            className="text-xl md:text-2xl font-bold cursor-pointer"
+            className="text-xl md:text-3xl font-bold cursor-pointer"
           >
             WinterSoul
           </h2>
@@ -94,18 +90,20 @@ const Header = () => {
         </div>
         <div className="navbar-end gap-2">
           <NavLink
-            to="/register"
+            to={user ? '/dashboard' : '/register'}
             className={({ isActive }) =>
-              isActive ? 'btn btn-secondary' : 'btn btn-ghost'
+              `px-4 py-2 md:text-sm lg:text-md font-semibold rounded-lg mr-2 ${isActive ? 'bg-indigo-600 text-white' : 'bg-transparent'
+              }`
             }
           >
-            {user ? user.displayName || user.email : 'Register'}
+            {user ? user.displayName || user.email : <p className='md:text-sm lg:text-md'>Register</p>}
           </NavLink>
           <NavLink
             to="/login"
             // onClick={user ? handleLogin : null}
             className={({ isActive }) =>
-              isActive ? 'btn btn-secondary' : 'btn btn-ghost'
+              `px-4 py-2 md:text-sm lg:text-md font-semibold rounded-lg mr-2 ${isActive ? 'bg-indigo-600 text-white' : 'bg-transparent'
+              }`
             }
           >
             {user ? (
@@ -117,7 +115,7 @@ const Header = () => {
                 />
               </div>
             ) : (
-              'Login'
+              <p className='md:text-sm lg:text-md'>Login</p>
             )}
           </NavLink>
         </div>

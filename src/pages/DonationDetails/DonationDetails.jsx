@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 import { useDonation } from '../../providers/DonationProvider';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const DonationDetails = () => {
+
+    const { checkAuth } = useContext(AuthContext);
+    const isAuthenticated = checkAuth();
     const { id } = useParams();
     const { campaigns } = useDonation(); // Correctly call useDonation as a function
     const navigate = useNavigate();
@@ -25,6 +29,22 @@ const DonationDetails = () => {
     };
 
     if (!campaign) {
+        return (
+            <div className="container mx-auto p-6">
+                <h1 className="text-2xl font-bold text-red-600">
+                    Campaign not found.
+                </h1>
+                <button
+                    onClick={() => navigate('/donation-campaigns')}
+                    className="mt-4 bg-blue-600 text-white py-2 px-4 rounded shadow"
+                >
+                    Back to Campaigns
+                </button>
+            </div>
+        );
+    }
+
+    if (!isAuthenticated) {
         return (
             <div className="container mx-auto p-6">
                 <h1 className="text-2xl font-bold text-red-600">
