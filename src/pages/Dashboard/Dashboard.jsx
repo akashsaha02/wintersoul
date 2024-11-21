@@ -16,7 +16,7 @@ const Dashboard = () => {
                         <img
                             src={user?.photoURL || "https://via.placeholder.com/150"}
                             alt="User Avatar"
-                            className="w-32 h-32 rounded-full border-4 border-white shadow-lg"
+                            className="w-32 h-32 object-cover rounded-full border-4 border-white shadow-lg"
                         />
                     </div>
                 </div>

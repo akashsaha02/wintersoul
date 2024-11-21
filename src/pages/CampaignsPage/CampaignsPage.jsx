@@ -24,31 +24,34 @@ const CampaignsPage = () => {
         {campaigns.map((campaign) => (
           <div
             key={campaign.id}
-            className="border rounded-lg shadow-md overflow-hidden bg-white transform transition duration-300 hover:scale-105"
+            className="border rounded-lg shadow-md overflow-hidden bg-white"
           >
             <img
               src={campaign.image}
               alt={campaign.title}
-              className="w-full h-48 object-cover"
+              className="w-full h-56 object-cover"
             />
             <div className="p-4">
               <h2 className="text-xl font-semibold text-gray-800">{campaign.title}</h2>
               <p className="text-gray-600 line-clamp-1 my-2">{campaign.description}</p>
-              <p className="text-green-800 text-sm my-4 font-bold ">
-                 <span className="bg-green-200 px-4 py-2 rounded-lg">
+              <p className=" text-sm my-4 font-bold flex gap-2 items-center ">
+                <span className="bg-green-200 text-green-800 px-4 py-1 rounded-lg">
                   {campaign.division}
-                  </span>
+                </span>
+                <span className="bg-purple-200 text-purple-800 px-4 py-1 rounded-lg">
+                  {campaign.status}
+                </span>
               </p>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center font-bold">
                 <Link
                   to={`/donation-campaigns/${campaign.id}`}
-                  className="text-blue-500 hover:underline text-sm"
+                  className="text-indigo-500 hover:underline text-md"
                 >
                   View Details
                 </Link>
                 <button
                   onClick={() => navigate(`/donation-campaigns/${campaign.id}`)}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition duration-200 text-sm"
+                  className="bg-indigo-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-indigo-700 transition duration-200 text-md"
                 >
                   Donate Now
                 </button>

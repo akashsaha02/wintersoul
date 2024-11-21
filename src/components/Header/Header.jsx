@@ -114,7 +114,7 @@ const Header = () => {
                 <img
                   src={user.photoURL}
                   alt="Avatar"
-                  className="w-10 rounded-full border-2 border-red-500"
+                  className="w-10 h-10 object-cover rounded-full border-2 border-red-500"
                 />
               </div>
             ) : (

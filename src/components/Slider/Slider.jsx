@@ -5,7 +5,10 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 
-import sliderImg from '../../assets/sliderImg-01.jpg'
+import sliderImg1 from '../../assets/sliderImg-01.jpg'
+import sliderImg2 from '../../assets/sliderImg2.jpg'
+import sliderImg3 from '../../assets/slider3.avif'
+
 
 // Import Swiper modules
 import { Navigation, Pagination, EffectFade, Autoplay } from "swiper/modules";
@@ -17,21 +20,21 @@ const SliderComponent = () => {
             id: 1,
             title: "Donate and Share Joy",
             description: "Help bring smiles to those in need.",
-            img: sliderImg,
+            img: sliderImg1,
             button: "Donate Now",
         },
         {
             id: 2,
             title: "Support Local Communities",
             description: "Together, we can make a difference.",
-            img: sliderImg,
+            img: sliderImg2,
             button: "Get Involved",
         },
         {
             id: 3,
             title: "Essential Blankets",
             description: "Help bring smiles to those in need.",
-            img: sliderImg,
+            img: sliderImg3,
             button: "Learn More",
         },
     ];
@@ -61,7 +64,7 @@ const SliderComponent = () => {
                                 className="w-full h-64 md:h-96 object-cover rounded-lg"
                             />
                             {/* Overlay */}
-                            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center px-4">
+                            <div className="absolute inset-0 bg-blue-900 bg-opacity-60 flex flex-col justify-center items-center text-center px-4">
                                 <h2 className="text-white text-2xl md:text-4xl font-bold mb-2">
                                     {slide.title}
                                 </h2>

@@ -43,13 +43,13 @@ const DonationDetails = () => {
     return (
         <div className="py-6">
             {/* Campaign Details Section */}
-            <div className="flex flex-col md:flex-row bg-white shadow-md rounded-lg overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2 bg-white shadow-md rounded-lg overflow-hidden">
                 <img
                     src={campaign.image}
                     alt={campaign.title}
-                    className="w-full md:w-1/2 h-64 object-cover"
+                    className="w-full object-cover p-6"
                 />
-                <div className="p-6 md:w-1/2">
+                <div className="p-6">
                     <h1 className="text-3xl font-bold mb-2 text-gray-800">{campaign.title}</h1>
                     <p className="text-gray-600 mb-2">{campaign.description}</p>
                     <p className="text-gray-600 mb-4">{campaign.longDescription}</p>
@@ -68,7 +68,7 @@ const DonationDetails = () => {
             {/* Donation Form Section */}
             <form
                 onSubmit={handleSubmit}
-                className="mt-8 bg-white shadow-md rounded-lg p-6"
+                className="mt-8 bg-white shadow-md rounded-lg p-6 max-w-3xl mx-auto"
             >
                 <h2 className="text-2xl font-semibold mb-4 text-gray-800">Submit Your Donation</h2>
                 <div className="mt-4">
