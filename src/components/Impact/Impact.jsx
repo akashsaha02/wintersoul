@@ -4,7 +4,7 @@ const Impact = () => {
   return (
     <div className="py-16 bg-gray-50 text-gray-800">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-indigo-800">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-indigo-800">
           Our Impact
         </h2>
         <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto text-gray-700">

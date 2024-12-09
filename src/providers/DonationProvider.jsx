@@ -9,7 +9,7 @@ const DonationProvider = ({ children }) => {
 
     useEffect(() => {
         // Fetch campaigns from an API
-        fetch('data.json')
+        fetch('/data.json')
             .then((response) => response.json())
             .then((data) => setCampaigns(data))
             .catch((error) => toast.error('Error fetching campaigns:', error));

@@ -1,13 +1,12 @@
 import { useEffect } from 'react';
-import { useDonation } from '../../providers/DonationProvider';
 import AboutSection from '../../components/AboutSection/AboutSection';
 import HowItWorks from '../../components/HowItWorks/HowItWorks';
 import Impact from '../../components/Impact/Impact';
-import Testimonial from '../../components/Testimonial/Testimonial';
 import Slider from '../../components/Slider/Slider';
 import { Helmet } from 'react-helmet';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
+import Newsletter from '../../components/Newsletter/Newsletter';
 
 const Home = () => {
   useEffect(() => {
@@ -25,8 +24,12 @@ const Home = () => {
       </Helmet>
 
       {/* Slider Section */}
-      <div data-aos="fade-in">
+      <div>
         <Slider />
+      </div>
+      {/* How It Works Section */}
+      <div data-aos="fade-up">
+        <HowItWorks />
       </div>
 
       {/* About Section */}
@@ -34,10 +37,7 @@ const Home = () => {
         <AboutSection />
       </div>
 
-      {/* How It Works Section */}
-      <div data-aos="fade-up">
-        <HowItWorks />
-      </div>
+
 
       {/* Impact Section */}
       <div data-aos="fade-up">
@@ -48,7 +48,7 @@ const Home = () => {
 
       {/* Testimonial Section */}
       <div data-aos="fade-up">
-        <Testimonial />
+        <Newsletter/>
       </div>
     </div>
   );
