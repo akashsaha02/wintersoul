@@ -42,7 +42,7 @@ const Header = () => {
 
   return (
     <div className='bg-white sticky top-0 z-50 shadow-md py-2'>
-      <div className="navbar max-w-[1440px] mx-auto">
+      <div className="navbar max-w-7xl mx-auto">
         <div className="navbar-start items-center">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="mr-3 btn btn-ghost lg:hidden">

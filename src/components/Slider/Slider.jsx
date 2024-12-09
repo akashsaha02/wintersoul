@@ -45,7 +45,7 @@ const SliderComponent = () => {
                         <div className="inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/80 flex flex-col justify-center items-center text-center px-6 py-10 w-full h-[70vh] md:h-[80vh]">
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">{slide.heading}</h2>
                             <p className="text-lg text-white mt-4 max-w-2xl">{slide.paragraph}</p>
-                            <button onClick={() => { navigate('/donation-campaigns') }} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">{slide.button}</button>
+                            <button onClick={() => { navigate('/donation-campaigns') }} className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded mt-4">{slide.button}</button>
                         </div>
                     </div>
                 ))}

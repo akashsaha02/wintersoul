@@ -63,14 +63,11 @@ const AboutSection = () => {
                     </button>
                 </div>
             </div>
-
-            
-
             {/* Call to Action */}
             <div className="flex justify-center items-center py-8" data-aos="zoom-in">
                 <button
                     onClick={() => navigate("/donation-campaigns")}
-                    className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded mt-4"
+                    className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded"
                 >
                     Donate Now
                 </button>
