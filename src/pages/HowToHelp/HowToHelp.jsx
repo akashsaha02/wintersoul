@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
-import bgImg from "../../assets/360_F_877649541_L74d9fVvQBAsconQrVVZV1X4ksLE3vAS.jpg";
+import bgImg from "../../assets/Sprinkle.svg";
 
 const HowToHelp = () => {
   const navigate = useNavigate();
@@ -27,11 +27,10 @@ const HowToHelp = () => {
       <div
         className="relative h-64 md:h-80 lg:h-96 bg-cover bg-center my-6 rounded-xl overflow-hidden"
         style={{ backgroundImage: `url(${bgImg})` }}
-        data-aos=""
       >
         <div
           className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center px-4"
-          data-aos="fade-in"
+          data-aos="  fade-up"
         >
           <h1 className="text-3xl md:text-4xl font-bold text-white text-center">
             How You Can Help
@@ -61,7 +60,7 @@ const HowToHelp = () => {
               Donate Winter Clothes
             </h3>
             <p className="text-gray-600 mt-2">
-              Provide warm clothing directly to those in need. Drop-offs are
+              Provide warm clothing to those in need. Drop-offs are
               available at multiple locations.
             </p>
             <button
@@ -174,22 +173,28 @@ const HowToHelp = () => {
 
       {/* Call to Action Section */}
       <div
-        className="py-12 bg-gradient-to-r from-blue-500 to-purple-600 text-center text-white px-4 rounded-lg"
-        data-aos="fade-up"
-        data-aos-delay="600"
+        className="py-12 bg-gradient-to-r from-blue-500 to-purple-600 text-center text-white px-4 rounded-lg mb-6"
+       data-aos="fade-in"
       >
-        <h2 className="text-2xl md:text-3xl font-bold">
-          Join Us in Making a Difference
-        </h2>
-        <p className="mt-2 text-sm md:text-lg">
-          Your efforts can warm someone's winter and change their life.
-        </p>
-        <button
-          className="mt-4 px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow hover:bg-gray-100"
-          onClick={() => navigate("/donation-campaigns")}
+        <div className=""
+         data-aos="fade-in"
+         data-aos-delay="400"
+         data-aos-delay="400"
+ 
         >
-          Get Involved
-        </button>
+          <h2 className="text-2xl md:text-3xl font-bold">
+            Join Us in Making a Difference
+          </h2>
+          <p className="mt-2 text-sm md:text-lg">
+            Your efforts can warm someone's winter and change their life.
+          </p>
+          <button
+            className="mt-4 px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow hover:bg-gray-100"
+            onClick={() => navigate("/donation-campaigns")}
+          >
+            Get Involved
+          </button>
+        </div>
       </div>
 
     </div>

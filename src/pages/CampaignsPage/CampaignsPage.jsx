@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useDonation } from "../../providers/DonationProvider";
-import bgImg from "../../assets/360_F_843622716_EBd9rtjvMJjHezFV0bTEPrOQ5LZ88p1S.jpg";
+import bgImg from "../../assets/Sprinkle.svg";
 import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css"; // AOS styles
@@ -27,9 +27,11 @@ const CampaignsPage = () => {
         <div
           className="relative h-64 md:h-80 lg:h-96 bg-cover bg-center my-6 rounded-xl overflow-hidden"
           style={{ backgroundImage: `url(${bgImg})` }}
-          data-aos="fade-up" // Apply animation on scroll
         >
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center px-4">
+          <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center px-4"
+          data-aos="fade-in" // Apply animation on scroll
+          
+          >
             <h1 className="text-3xl md:text-4xl font-bold text-white text-center">
               Donation Campaigns
             </h1>

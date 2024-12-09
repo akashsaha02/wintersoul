@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import ProfileTooltip from '../ProfileTooltip/ProfileTooltip';
 
 const Header = () => {
   const { user } = useContext(AuthContext);
@@ -35,17 +36,6 @@ const Header = () => {
       >
         How to Help?
       </NavLink>
-      {user && (
-        <NavLink
-          to="/dashboard"
-          className={({ isActive }) =>
-            `px-4 py-2 md:text-sm lg:text-md font-semibold rounded-lg mr-2 ${isActive ? 'bg-indigo-600 text-white' : 'bg-transparent'
-            }`
-          }
-        >
-          Dashboard
-        </NavLink>
-      )}
     </>
   );
 
@@ -90,35 +80,28 @@ const Header = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end gap-2">
-          <NavLink
-            to='/register'
-            className={({ isActive }) =>
-              `px-4 py-2 md:text-sm lg:text-md font-semibold rounded-lg ${isActive ? 'bg-indigo-600 text-white' : 'bg-transparent'
-              }`
-            }
-          >
-            {user ? user.displayName || user.email : <p className='md:text-sm lg:text-md'>Register</p>}
-          </NavLink>
-          <NavLink
-            to="/login"
-            // onClick={user ? handleLogin : null}
-            className={({ isActive }) =>
-              `px-4 py-2 md:text-sm lg:text-md font-semibold rounded-lg  ${isActive ? 'bg-indigo-600 text-white' : 'bg-transparent'
-              }`
-            }
-          >
-            {user ? (
-              <div className="text-center rounded-md flex flex-col justify-center items-center gap-2">
-                <img
-                  src={user.photoURL}
-                  alt="Avatar"
-                  className="w-10 h-10 object-cover rounded-full border-2 border-red-500"
-                />
-              </div>
-            ) : (
-              <p className='md:text-sm lg:text-md'>Login</p>
-            )}
-          </NavLink>
+          {
+            <NavLink
+              to={user ? "/dashboard" : "/register"}
+              className={({ isActive }) =>
+                `px-4 py-2 md:text-sm lg:text-md font-semibold rounded-lg ${isActive ? 'bg-indigo-600 text-white' : 'bg-transparent dark:text-gray-200'
+                }`
+              }>
+              {user ? "My Profile" : "Register"}
+            </NavLink>
+
+          }
+
+          {
+            user ? <ProfileTooltip img={user.displayURL} name={user.displayName} email={user.email} /> : <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                `px-4 py-2 md:text-sm lg:text-md font-semibold rounded-lg ${isActive ? 'bg-teal-600 text-white' : 'bg-transparent dark:text-gray-200'
+                }`
+              }>
+              Login
+            </NavLink>
+          }
         </div>
       </div>
     </div>

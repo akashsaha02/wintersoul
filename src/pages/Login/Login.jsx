@@ -34,6 +34,7 @@ const Login = () => {
     const handleGoogleSignIn = async () => {
         try {
             await googleSignIn();
+            navigate('/');
             toast.success('Logged in successfully with Google!');
         } catch (error) {
             toast.error('Error logging in with Google!');
