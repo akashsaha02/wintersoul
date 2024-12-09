@@ -123,7 +123,7 @@ const HowToHelp = () => {
             data-aos="fade-right"
           >
             <p className="text-gray-600">
-              "WinterSoul's donation drive gave me hope during the coldest days. Their kindness is truly inspiring."
+              &quot;WinterSoul&apos;s donation drive gave me hope during the coldest days. Their kindness is truly inspiring.&quot;
             </p>
             <div className="mt-4 text-right text-gray-800 font-semibold">
               - Sarah, Beneficiary
@@ -136,7 +136,7 @@ const HowToHelp = () => {
             data-aos="fade-left"
           >
             <p className="text-gray-600">
-              "Volunteering with WinterSoul has been a life-changing experience. I feel so connected to the community."
+              &quot;Volunteering with WinterSoul has been a life-changing experience. I feel so connected to the community.&quot;
             </p>
             <div className="mt-4 text-right text-gray-800 font-semibold">
               - John, Volunteer
@@ -149,7 +149,7 @@ const HowToHelp = () => {
             data-aos="fade-right"
           >
             <p className="text-gray-600">
-              "I received warm clothing when I needed it most. I’m forever grateful to WinterSoul."
+              &quot;I received warm clothing when I needed it most. I’m forever grateful to WinterSoul.&quot;
             </p>
             <div className="mt-4 text-right text-gray-800 font-semibold">
               - Maria, Beneficiary
@@ -162,7 +162,7 @@ const HowToHelp = () => {
             data-aos="fade-left"
           >
             <p className="text-gray-600">
-              "Collaborating with WinterSoul has brought our community closer. We’ve achieved so much together."
+              &quot;Collaborating with WinterSoul has brought our community closer. We’ve achieved so much together.&quot;
             </p>
             <div className="mt-4 text-right text-gray-800 font-semibold">
               - Ahmed, Partner
@@ -174,19 +174,17 @@ const HowToHelp = () => {
       {/* Call to Action Section */}
       <div
         className="py-12 bg-gradient-to-r from-blue-500 to-purple-600 text-center text-white px-4 rounded-lg mb-6"
-       data-aos="fade-in"
+        data-aos="fade-in"
       >
         <div className=""
-         data-aos="fade-in"
-         data-aos-delay="400"
-         data-aos-delay="400"
- 
+          data-aos="fade-in"
+          data-aos-delay="400"
         >
           <h2 className="text-2xl md:text-3xl font-bold">
             Join Us in Making a Difference
           </h2>
           <p className="mt-2 text-sm md:text-lg">
-            Your efforts can warm someone's winter and change their life.
+            Your efforts can warm someone&apos;s winter and change their life.
           </p>
           <button
             className="mt-4 px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow hover:bg-gray-100"

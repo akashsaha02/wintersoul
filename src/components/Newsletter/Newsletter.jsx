@@ -1,8 +1,6 @@
-import { Button } from "@material-tailwind/react";
-
 const Newsletter = () => {
   return (
-    <div className="w-full py-12 bg-indigo-50" >
+    <div className="w-full py-12 md:py-16 lg:py-20 bg-indigo-50" >
       {/* Gradient Overlay */}
       <div className=""></div>
 

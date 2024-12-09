@@ -1,6 +1,7 @@
 import { Carousel } from "@material-tailwind/react";  // Import Material Tailwind Carousel
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useNavigate } from "react-router-dom";
+import bgImg from "../../assets/background-3.jpg";
 
 
 const SliderComponent = () => {
@@ -29,7 +30,7 @@ const SliderComponent = () => {
     ];
     const navigate = useNavigate();
     return (
-        <div className="w-full flex justify-center items-center mx-auto bg-winter bg-cover" >
+        <div style={{ backgroundImage: `url(${bgImg})` }} className="w-full flex justify-center items-center mx-auto bg-winter bg-cover" >
             {/* Material Tailwind Carousel */}
             <Carousel
                 loop
