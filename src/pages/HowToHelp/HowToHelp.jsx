@@ -18,7 +18,7 @@ const HowToHelp = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="max-w-7xl mx-auto">
       <Helmet>
         <title>WinterSoul | How To Help</title>
       </Helmet>

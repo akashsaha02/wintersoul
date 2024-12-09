@@ -7,7 +7,7 @@ const Layout = () => {
     return (
         <div>
             <Header />
-            <div className='max-w-[1440px] mx-auto px-4 min-h-screen grid grid-rows-[auto_1fr_auto]'>
+            <div className='min-h-screen grid grid-rows-[auto_1fr_auto]'>
                 <Outlet />
                 <Toaster />
             </div>

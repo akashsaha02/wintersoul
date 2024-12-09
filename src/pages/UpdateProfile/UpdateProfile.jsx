@@ -28,7 +28,7 @@ const UpdateProfile = () => {
             setError("");
             navigate("/dashboard"); // Redirect to Dashboard after success
         } catch (err) {
-            setError("Failed to update profile. Please try again.");
+            setError("Failed to update profile. Please try again.",err);
             setSuccess("");
         }
     };

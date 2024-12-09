@@ -19,7 +19,7 @@ const CampaignsPage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <Helmet>
         <title>WinterSoul | Donation Campaigns</title>
       </Helmet>
@@ -61,7 +61,16 @@ const CampaignsPage = () => {
                 <span className="bg-green-200 text-green-800 px-4 py-1 rounded-lg">
                   {campaign.division}
                 </span>
-                <span className="bg-purple-200 text-purple-800 px-4 py-1 rounded-lg">
+                <span
+                  className={`px-4 py-1 rounded-lg ${campaign.status === 'Ongoing'
+                      ? 'bg-purple-200 text-purple-800'
+                      : campaign.status === 'Completed'
+                        ? 'bg-blue-200 text-blue-800'
+                        : campaign.status === 'Upcoming'
+                          ? 'bg-yellow-200 text-yellow-800'
+                          : 'bg-gray-200 text-gray-800'
+                    }`}
+                >
                   {campaign.status}
                 </span>
               </p>

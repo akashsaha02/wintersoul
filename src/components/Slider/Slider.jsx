@@ -1,18 +1,10 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-fade";
-
-
-import sliderImg1 from '../../assets/sliderImg-01.jpg'
-import sliderImg2 from '../../assets/sliderImg2.jpg'
-import sliderImg3 from '../../assets/slider3.avif'
-
-
-// Import Swiper modules
-import { Navigation, Pagination, EffectFade, Autoplay } from "swiper/modules";
+import { Carousel } from "@material-tailwind/react";  // Import Material Tailwind Carousel
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import sliderImg1 from '../../assets/banner-001.jpeg';
+import sliderImg2 from '../../assets/sliderImg2.jpg';
+import sliderImg3 from '../../assets/slider3.avif';
 import { useNavigate } from "react-router-dom";
+import { Button } from "@material-tailwind/react";
 
 const SliderComponent = () => {
     const slides = [
@@ -33,7 +25,7 @@ const SliderComponent = () => {
         {
             id: 3,
             title: "Essential Blankets",
-            description: "Help bring smiles to those in need.",
+            description: "Providing warmth to those in need.",
             img: sliderImg3,
             button: "Learn More",
         },
@@ -42,48 +34,45 @@ const SliderComponent = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="max-w-[300px] sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-7xl 2xl:max-w-[1440px] mx-auto my-4 md:my-6">
-            <Swiper
-                modules={[Navigation, Pagination, EffectFade, Autoplay]}
-                effect="fade"
-                spaceBetween={30}
-                slidesPerView={1}
-                navigation
-                pagination={{ clickable: true }}
-                autoplay={{ delay: 3000, disableOnInteraction: false }}
-                loop={true}
-                className="rounded-lg shadow-lg"
+        <div className="w-full mx-auto">
+            {/* Material Tailwind Carousel */}
+            <Carousel
+                loop
+                autoplay
+                interval={3000}
+                showIndicators={true}
+                showArrows={false}
+                className=""
             >
                 {slides.map((slide) => (
-                    <SwiperSlide key={slide.id}>
-                        <div className="relative">
-                            {/* Background Image */}
-                            <img
-                                src={slide.img}
-                                alt={slide.title}
-                                className="w-full h-72 md:h-[600px] object-cover rounded-lg"
-                            />
-                            {/* Overlay */}
-                            <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center px-4">
-                                <h2 className="text-white text-3xl md:text-5xl font-bold mb-2">
-                                    {slide.title}
-                                </h2>
-                                <p className="text-gray-200 text-sm md:text-lg mb-4">
-                                    {slide.description}
-                                </p>
-                                <button
-                                    onClick={() => navigate('/donation-campaigns')}
-                                    className="px-6 py-2 bg-indigo-600 text-white font-white font-bold rounded-md text-sm md:text-lg shadow-md hover:bg-indigo-800 transition">
-                                    {slide.button}
-                                </button>
-                            </div>
+                    <div key={slide.id} className="relative">
+                        {/* Background Image */}
+                        <img
+                            src={slide.img}
+                            alt={slide.title}
+                            className="w-full h-[75vh] md:h-[90vh] object-cover rounded-lg"
+                        />
+                        {/* Gradient Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/80 to-black/60 flex flex-col justify-center items-center text-center px-6 py-10">
+                            <h2 className="text-white text-4xl md:text-6xl font-semibold mb-4 drop-shadow-lg">
+                                {slide.title}
+                            </h2>
+                            <p className="text-gray-200 text-base md:text-lg mb-6 max-w-xl leading-relaxed">
+                                {slide.description}
+                            </p>
+                            <Button
+                                onClick={() => navigate('/donation-campaigns')}
+                                color="indigo"
+                                className="text-white px-8 py-3 text-sm md:text-lg rounded-full shadow-lg hover:shadow-md hover:scale-105 transition-all duration-300"
+                            >
+                                {slide.button}
+                            </Button>
                         </div>
-                    </SwiperSlide>
+                    </div>
                 ))}
-            </Swiper>
+            </Carousel>
         </div>
     );
 };
 
 export default SliderComponent;
-

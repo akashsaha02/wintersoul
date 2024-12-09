@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
-import logo from '../../../public/2077008.png';
 
 const Header = () => {
   const { user } = useContext(AuthContext);
@@ -56,7 +55,7 @@ const Header = () => {
       <div className="navbar max-w-[1440px] mx-auto">
         <div className="navbar-start items-center">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="mr-3 lg:hidden">
+            <div tabIndex={0} role="button" className="mr-3 btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -83,7 +82,7 @@ const Header = () => {
             onClick={() => navigate("/")}
             className="text-xl md:text-3xl font-bold cursor-pointer flex items-center gap-2"
           >
-            <span className=""><img className='w-10 h-10' src={logo} alt=""/></span>
+            <span className="hidden sm:block"><img className='w-10 h-10' src='/2077008.png' alt="" /></span>
             WinterSoul
           </h2>
         </div>
